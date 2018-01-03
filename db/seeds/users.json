@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Chinchilla",
+    "email": "chinchilla@gmail.com",
+    "password": "123456"
+  },
+  {
+    "name": "Bibibu",
+    "email": "bibibu@gmail.com",
+    "password": "123456"
+  },
+  {
+    "name": "Chewbacca",
+    "email": "chewie123@gmail.com",
+    "password": "123456"
+  },
+  {
+    "name": "JaviGoblino",
+    "email": "GalloGoblino@gmail.com",
+    "password": "123456"
+  },
+  {
+    "name": "BriGuy",
+    "email": "briguy@gmail.com",
+    "password": "123456"
+  },
+]
