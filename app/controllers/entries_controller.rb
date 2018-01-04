@@ -23,8 +23,6 @@ class EntriesController < ApplicationController
         status: :bad_request
     end
 
-    # entry.save!
-    # render json: entry, status: :ok
   end
 
   def update
