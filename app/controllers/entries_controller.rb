@@ -34,7 +34,7 @@ class EntriesController < ApplicationController
 
   private
     def entry_params
-      params.require(:entry).permit(:text)
+      params.require(:entry).permit(:text, :user_id)
     end
 
 end
