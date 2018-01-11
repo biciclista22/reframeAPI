@@ -15,6 +15,7 @@ class EntriesController < ApplicationController
 
   def create
     entry = Entry.new(entry_params)
+    # entry.user = User.first
 
     if entry.save
       render json: { text: entry.text }, status: :ok
