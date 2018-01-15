@@ -26,6 +26,10 @@ class EntriesController < ApplicationController
 
   end
 
+
+
+  
+
   def update
   end
 

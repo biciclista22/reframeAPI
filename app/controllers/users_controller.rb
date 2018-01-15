@@ -14,6 +14,8 @@ class UsersController < ApplicationController
   end
 
   def create
+    #need to create conditional -- search for user, if exists, return user id
+    # if doesn't exit, create new user and give visual feedback
     user = User.new(user_params)
 
     if user.save
@@ -23,6 +25,14 @@ class UsersController < ApplicationController
         status: :bad_request
     end
 
+
+
+    # @user = User.new(user_params)
+    #       if @user.save
+    #         render text: @user.access_token, status: 201
+    #       else
+    #         render json: @user.errors, status: 422
+    #       end
   end
 
   def update
