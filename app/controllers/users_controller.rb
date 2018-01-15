@@ -17,7 +17,7 @@ class UsersController < ApplicationController
     user = User.new(user_params)
 
     if user.save
-      render json: { name: user.name, email: user.email, password: user.password }, status: :ok
+      render json: { name: user.name, email: user.email, password: user.password, user_id: user.id }, status: :ok
     else
       render json: { errors: user.errors.messages },
         status: :bad_request
