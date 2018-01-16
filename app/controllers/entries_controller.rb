@@ -2,16 +2,12 @@ class EntriesController < ApplicationController
   protect_from_forgery with: :null_session
 
   def index
-    entries = Entry.all
+    user = User.find(params[:user_id])
+    entries = user.entries
+
     render json: entries, status: :ok
   end
 
-  def show
-    # render(
-    # status: :ok,
-    # json:
-    # )
-  end
 
   def create
     entry = Entry.new(entry_params)
@@ -28,7 +24,7 @@ class EntriesController < ApplicationController
 
 
 
-  
+
 
   def update
   end

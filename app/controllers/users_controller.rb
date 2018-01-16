@@ -16,7 +16,7 @@ class UsersController < ApplicationController
   def create
     #need to create conditional -- search for user, if exists, return user id
     # if doesn't exit, create new user and give visual feedback
-    # @user = User.find_by(params[:user][:email])
+    user = User.find_by(params[:email])
 
     #    @merchant = Merchant.find_by(id: expected_merchant_id)
 
