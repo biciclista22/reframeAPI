@@ -16,7 +16,10 @@ class UsersController < ApplicationController
   def create
     #need to create conditional -- search for user, if exists, return user id
     # if doesn't exit, create new user and give visual feedback
-    user = User.new(user_params)
+    # @user = User.find_by(params[:user][:email])
+
+    #    @merchant = Merchant.find_by(id: expected_merchant_id)
+
 
     if user.save
       render json: { name: user.name, email: user.email, password: user.password, user_id: user.id }, status: :ok
