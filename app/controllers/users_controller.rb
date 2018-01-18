@@ -20,6 +20,7 @@ class UsersController < ApplicationController
       render json: {errors: "email already exists in our records"},
       status: :bad_request
     else
+      user.email = user.email.downcase
       if user.save
         render json: { name: user.name, email: user.email, password: user.password, user_id: user.id }, status: :ok
       else
