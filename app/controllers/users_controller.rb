@@ -2,7 +2,8 @@ class UsersController < ApplicationController
   protect_from_forgery with: :null_session
 
   def login
-    user = User.find_by_email(params[:email])
+    email = params[:email].downcase
+    user = User.find_by_email(email)
 
     if user
       render json: { email: user.email, user_id: user.id },
